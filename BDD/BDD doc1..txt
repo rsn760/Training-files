@@ -1,0 +1,63 @@
+Feature  file :   sceanrio 
+ login feature          sceanrio outline .
+Given  - step definition file we will be using selenium+java+anaotation.
+when 
+then 
+as 
+But 
+
+Test runner - junit , To run your feature .
+                             to generate the output report. 
+ First sceanrio 
+login to webite . 
+
+1. precondition - user should be on login page , url is aleardy launched .
+in eclipse create maven project . 
+add all dependiencies  for cucumber and  selenium . 
+IN SRC main java - create a package  with name feature . 
+under feature package create a file . name as login.feature .
+save it a login.feature.
+go to  help 
+eclipse market place search for natural . 
+press enter . 
+
+
+ Feature file content 
+Feature: Free CRm login Feature. 
+Sceanrio : Free CRM login test Sceanrio 
+Given User is already on login page .
+When  title of login page id Free CRM . 
+Then  user  username and user enters password.
+And user clicks on login button .
+And user is on Home page .
+
+Create a pacakage step defintion .
+create a  javaclass . 
+name it a Login stepdefinition . dont create a main method 
+
+
+
+in the public class loginstep defintion 
+{
+@Given("User is already on login page$")
+create a method 
+public void  user_already_on_loginpage()
+{
+
+
+In SRC main java create a package  Runner . 
+insode the runner pack
+create a class testrunner . 
+@RunWith(Cucumber.class)
+	@CucumberOptions(
+			features = " path (/Documents/workspace/FreeCrmBDDFramework/src/main/java/Features/login.feature",
+
+			glue={"stepDefinitions" - path of ur step definition },
+			format= {"pretty","html:test-outout"}
+			)
+
+	public class TestRunner {
+
+	}
+
+Runner class  - as Junit . no more  Test ng 

@@ -1,0 +1,20 @@
+package MyRunner;
+
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import cucumber.junit.Cucumber;
+import org.junit.runner.RunWith;
+
+
+
+	@RunWith(Cucumber.class)
+	@CucumberOptions(
+			features = "/Users/NaveenKhunteta/Documents/workspace/FreeCrmBDDFramework/src/main/java/Features/login.feature",
+			glue={"stepDefinitions"},
+			format= {"pretty","html:test-outout"}
+			)
+
+	public class TestRunner {
+
+	}
