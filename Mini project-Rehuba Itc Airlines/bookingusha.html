@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+   
+          *{
+              margin: 0;
+             padding: 0;
+            }
+            .background-image{background-image: url("https://media.istockphoto.com/photos/commercial-jet-flying-over-clouds-picture-id155380716?b=1&k=20&m=155380716&s=170667a&w=0&h=LjalFiyrKtBye-26dufNMHkbU_k_KrJ1-UYnbTpaxtM=");
+                 background-size:cover;
+                 background-repeat:no-repeat;
+                 width: 1250px;
+                 height: 700px;
+                 
+              }
+               #input-group, #input-group1, #input-group2, #input-group3{
+                width:250px;
+                margin:3px;
+                border-top:none;
+                border-left:none;
+                border-right:none;
+                outline:none;
+                background:transparent;
+                color:black;
+                padding: 6px;
+                font-size: 16PX;
+                 }
+                 h3{
+                border-bottom: 2px solid #070402e5;
+                width:200px;
+                padding:5px;
+                 }
+                 button{
+                    background-color:rgb(219, 96, 219);
+                    border: none;
+                    padding: 12px;
+                    text-decoration: solid;
+                 }
+                 /* #adult{
+                    padding: 5px;
+                 }
+                 #Children{
+                    padding: 5px;
+                 }
+                 #infant{
+                    padding: 5px;
+                 } */
+                 
+        </style>
+    </head>
+<body>
+    
+    <div class="background-image">
+        <h1 style="text-align:center">Rehuba Airline Booking Form</h1>
+    <form name="myform" method="post" onsubmit="return validate()" action="last.html">
+        <font size="4">
+        <table align="center" cellpadding="10">
+         <tr>  <h3>Booking Details</h3> </tr>
+         
+           <tr><td> <select id="input-group" style="background:white;">
+               <option value="value">Departure</option>
+               <option value="America">America</option>
+               <option value="Pack">Pakistan</option>
+               <option value="Switz">India</option>
+               <option value="Dubai">Dubai</option></select></td>
+            <td><select id="input-group1" style="background:white;">
+               <option value="value">Destination</option>
+               <option value="Uk">UK</option>
+               <option value="USA">USA</option>
+               <option value="austria">Austria</option>
+               <option value="canada">Canada</option>
+           </select></td></tr>
+            <tr><td>
+                <select id="input-group2" style="background:white;">
+                    <option value="value">Preffered Airline</option>
+                    <option value="Emirates">Emirates</option>
+                    <option value="Air france">Air France</option>
+                    <option value="Air China">Air China</option>
+                    <option value="American Airlines">American Airlines</option>
+                </select></td>
+               <td> <select id="input-group3" style="background:white;">
+                    <option value="value">Preffered Seating</option>
+                    <option value="First class">First Class</option>
+                    <option value="Business">Business</option>
+                    <option value="premium">Premium economy</option>
+                    <option value="Economy">Economy</option>
+                    </select>
+            </td></tr>
+            <tr><td><label for="Adult">Adult(12+ yrs)</label>
+            <select id="adult">
+            <option value=""></option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="20">20+ yrs</option>
+             </select></td>
+            <td> <label for="Children">Children(2-11 yrs)</label>
+         <select id="Children">
+            <option value=""></option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+             <option value="6">6</option>
+             <option value="7">7</option>
+             <option value="8">8</option>
+             <option value="9">9</option>
+             <option value="10">10</option>
+             <option value="11">11</option>
+            </select></td>
+           <td><label for="Infant">Infant(under 2yrs)</label>
+            <select id="infant">
+               <option value=""></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                </select></td></tr>
+            <tr><td><br>
+                <font size="3"color="blue"face="Arial">Select Your Fare </font></td>
+           
+              <td><br><input id="radio" type="radio"name="radioButton"value="one">one-way
+
+                <!-- <input type=" "id=""name=""placeholder=""></td> -->
+               
+               <td><br><input id="radio1" type="radio"name="radioButton"value="two">Round-Trip
+                <!-- <input type="Round-Trip"placeholder=""></td> -->
+                </td>
+            </tr>
+             <tr><td><br>
+            <label for="checkin-date">Arrival Date</label>
+             <input type="date"id="Arrival"name=""required></td>
+            <td><br><label for="checkout-date">Departure Date</label>
+            <input type="date"id="Departure"name=""required></td>
+            </tr>
+            <tr><td><br><h3>Personal Details</h3></td></tr>
+            <tr>
+                <td> First Name</td>
+               <td><input id="fname"type="text"name="fname"maxlength="20"/>
+           
+                 </td></tr>
+       
+                <td> Last Name</td>
+               <td><input id="lname" type="text"name="lname"maxlength="20"/>
+               </td>
+               
+            </tr>  
+       
+           
+            <tr>
+                <td>Date of Birth</td>
+                <td><input id="dob" type="date"name="date"min="1981-01-01"/>
+                </td>
+            </tr>  
+            <tr>
+                <td> Email Id</td>
+                <td><input class="email" type="text"name="email"maxlength="20"/>
+                </td>
+            </tr> 
+           
+            <tr>
+                <td> Phone</td>
+                <td><input class="phone" type="tel"name="phone" pattern="[0-9]{10}" placeholder="Enter 10 digits only" title="* Enter 10 digits phone number" maxlength="10" required/><br><br>
+                </td>
+            </tr>  
+            <tr>
+                <td>
+                   
+            <button type="submit" id="sub"class="btn btn-warning text-white">Submit Form <a href="last.html"></a></button></td>
+            <br><td><button type="reset"id="reset" class="btn btn-primary text-white">Clear Form</button>
+                </td>
+            </tr>
+           
+           
+            </table>
+            </font>
+            </form>
+            <script type="text/javascript">
+            function validate()
+            {
+                var first=document.forms["myform"]["fname"].value;
+                var last=document.forms["myform"]["lname"].value;
+                var dob=document.forms["myform"]["date"].value;
+                var email=document.forms["myform"]["email"].value;
+                var phone=document.forms["myform"]["phone"].value;
+               // var today=new Date();
+               // var cdate=today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+               // if(dob>=cdate)
+                // {
+                //     alert("Date of Birth is in future")
+                // }
+                if(first == "")
+                {
+                    alert("enter the first name");
+                    return false;
+                }
+                if(!isNaN(first))
+                {
+                    alert("name in characters");
+                    return false;
+                }
+     
+                if(last == "")
+                {
+                    alert("enter the last name");
+                    return false;
+                }
+                if(!isNaN(last))
+                {
+                    alert("name in characters");
+                    return false;
+                }
+                if(dob == "")
+                {
+                    alert("enter the date of birth");
+                    return false;
+                }
+                 
+                if(email == "")
+                {
+                    alert("enter the email");
+                    return false;
+                }
+   
+                var at = email.indexOf("@");
+                var dot = email.lastIndexOf(".");
+                if(at<1||dot<at+2||dot+2 >=emai.length)
+                {
+                    alert("not valid mail ");
+                    return false;
+                }
+                // if(phone == "")
+                // {
+                //     alert("enter phone no");
+                //     return false;
+                // }
+                // if(isNaN(phone))
+                // {
+                //     alert("phone no in digit");
+                //     return false;
+                // }
+                // if(phone.length!=10)
+                // {
+                //     alert("must be 10 digits");
+                //     return false;
+                // }
+            }
+           
+            </script>
+            <br><br><br>
+            <footer>
+                <a id="click2" href="mainpage.html">
+                    <img src="https://png.pngtree.com/png-vector/20190501/ourmid/pngtree-vector-back-icon-png-image_1011142.jpg" width="40" height="40">
+                    
+                </a>
+                <br>(Click here to go back)
+            </footer>
+            </div>
+            </body>
+            </html>
